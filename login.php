@@ -98,7 +98,7 @@ if(isset($_POST['btnLogin'])){
         //make use of the static function, and we passed to parameters
         $res = $student::studentAuthentication($email, $h_upass);
         if ($res==true) {
-             //redirect(web_root."admin/modules/autonumber/index.php"); 
+             //redirect(web_root."admin/index.php"); 
              redirect(web_root."index.php"); 
           echo $_SESSION['StudentID'];
         }else{

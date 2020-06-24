@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <!-- styles -->
-  <link href="<?php echo web_root;?>plugins/homepage/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?php echo web_root;?>plugins/homepage/assets/css/bootstrap.css" rel="stylesheet">
   <link href="<?php echo web_root;?>plugins/homepage/assets/css/bootstrap-responsive.css" rel="stylesheet">
   <link href="<?php echo web_root;?>plugins/homepage/assets/css/prettyPhoto.css" rel="stylesheet">
   <link href="<?php echo web_root;?>plugins/homepage/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
@@ -50,7 +50,7 @@
             <!-- top menu -->
             <div class="navigation">
               <nav>
-                <ul class="nav topnav nav-dark">
+                <ul class="nav topnav">
                   <li class="active">
                     <a href="index.php"><i class="icon-home"></i> Inicio </a>
                   </li>

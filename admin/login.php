@@ -11,7 +11,7 @@ require_once("../include/initialize.php");
  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Login V14</title>
+  <title>Login Admin</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->  
@@ -37,18 +37,26 @@ require_once("../include/initialize.php");
   <link rel="stylesheet" type="text/css" href="<?php echo web_root;?>plugins/adminlogin/css/main.css">
 <!--===============================================================================================-->
 </head>
+
 <body>
+
+
   
   <div class="limiter">
     <div class="container-login100">
       <div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
         <form class="login100-form validate-form flex-sb flex-w" method="POST" action="login.php">
+        <div class="img-logo-login" data-tilte>
+          <img src="<?php echo web_root; ?>images/logo-polinternacional.png" alt="logopoli" >
+        </div>
           <span class="login100-form-title p-b-32">
-            Account Login
+          
+            Ingreso Administrador
+           
           </span>
-
+          
           <span class="txt1 p-b-11">
-            Username
+            Usuario
           </span>
           <div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
             <input class="input100" type="text" name="user_email" >
@@ -56,7 +64,7 @@ require_once("../include/initialize.php");
           </div>
           
           <span class="txt1 p-b-11">
-            Password
+            Contraseña
           </span>
           <div class="wrap-input100 validate-input m-b-12" data-validate = "Password is required">
             <span class="btn-show-pass">
@@ -70,27 +78,31 @@ require_once("../include/initialize.php");
             <div class="contact100-form-checkbox">
               <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
               <label class="label-checkbox100" for="ckb1">
-                Remember me
+                Recordar
               </label>
             </div>
 
             <div>
               <a href="#" class="txt3">
-                Forgot Password?
+                olvidaste tu contraseña?
               </a>
             </div>
           </div>
 
           <div class="container-login100-form-btn">
             <button type="submit" class="login100-form-btn" name="btnLogin">
-              Login
+              Ingresar
             </button>
+       
           </div>
+          
 
         </form>
+        
       </div>
     </div>
   </div>
+  
   
 
   <div id="dropDownSelect1"></div>

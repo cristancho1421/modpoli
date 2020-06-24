@@ -1,6 +1,6 @@
-<h1><?php echo $title;?></h1>
+<h1 CLASS=" titulos "><?php echo $title;?></h1>
 <div class="col-lg-12">
-	<div class="table-responsive">
+	<div class="table-responsive tablas-fondo">
 		<table id="example" class="table table-bordered">
 			<thead>
 				<th width="2%">#</th>

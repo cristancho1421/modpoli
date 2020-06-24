@@ -8,7 +8,7 @@ $content='home.php';
 $view = (isset($_GET['q']) && $_GET['q'] != '') ? $_GET['q'] : '';
 switch ($view) { 
   case 'lesson':
-    $title = "Lesson";
+    $title = "Lección";
     $content = 'lesson.php';
    # code...
    break; 

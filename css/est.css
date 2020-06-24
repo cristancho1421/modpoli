@@ -1,0 +1,245 @@
+body {
+    background-color: #ccc;
+    background-image: url("../images/imagen-header-axiliar-enfermeria-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    padding-top: 60px;
+    padding-right: 120px;
+    padding-left: 100px;
+}
+
+.header nav {
+    z-index: 1000;
+    width: 100%;
+    margin: 5px auto;
+    padding: 15px, 20px;
+}
+
+.header nav ul {
+    list-style: none;
+}
+
+.header nav ul li {
+    display: inline-block;
+    position: relative;
+    line-height: 40px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.header nav ul li:hover {
+    border-radius: 10px;
+    background: rgba(75, 180, 212, 0.8);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: .2s ease all;
+    -webkit-transition: .2s ease all;
+    -moz-transition: .2s ease all;
+    -ms-transition: .2s ease all;
+    -o-transition: .2s ease all;
+}
+
+.header nav ul li a {
+    color: #333;
+    display: block;
+    text-decoration: none;
+    padding: 3px 15px;
+    font-size: 35px;
+}
+
+.header nav ul li a:hover {
+    color: #eee;
+    display: block;
+    text-decoration: none;
+    padding: 3px 15px;
+    font-size: 35px;
+}
+
+.header nav ul li a i {
+    font-size: 35px;
+    margin-right: 3px;
+    margin-left: 7px;
+}
+
+.inicio {
+    position: relative;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    margin-right: -5%;
+}
+
+.salir {
+    position: relative;
+    float: right;
+    text-align: center;
+    line-height: 40px;
+    margin-right: -5%;
+}
+
+.cont-menu {
+    width: 600px;
+    height: 400px;
+    margin-top: 10%;
+    margin-left: 70%;
+    float: left;
+    opacity: .85;
+}
+
+.menu1 {
+    background-image: url("../e_admin/images/1.jpg");
+    object-fit: cover;
+    background-size: 100%;
+    height: 50%;
+    width: 60%;
+    float: left;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+.menu2 {
+    background-image: url("../e_admin/images/2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: 120% 100%;
+    background-position: center center;
+    height: 50%;
+    width: 40%;
+    float: left;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+.menu3 {
+    background-image: url("../e_admin/images/3.jpg");
+    object-fit: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 50%;
+    width: 40%;
+    float: left;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+.menu4 {
+    background-image: url("../e_admin/images/img.jpg");
+    object-fit: cover;
+    background-size: 100%;
+    height: 50%;
+    width: 60%;
+    float: left;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+.letra {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.letra a {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.link1 {
+    background: rgba(50, 134, 230, .7);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    opacity: 1;
+}
+
+.menu1:hover .link1 {
+    height: 100%;
+}
+
+.link2 {
+    background: rgba(50, 134, 230, .7);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.menu2:hover .link2 {
+    height: 100%;
+}
+
+.link3 {
+    background: rgba(50, 134, 230, .7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.menu3:hover .link3 {
+    height: 100%;
+    bottom: 0;
+}
+
+.link4 {
+    background: rgba(50, 134, 230, .7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.menu4:hover .link4 {
+    height: 100%;
+}
+
+.tablas-fondo {
+    background-color: rgba(91, 110, 218, .8);
+    color: #fff;
+}
+
+.titulos {
+    background-color: rgba(75, 180, 212, 0.8);
+    color: #fff;
+    text-align: center;
+}

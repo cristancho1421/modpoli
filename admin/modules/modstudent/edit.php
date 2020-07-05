@@ -2,7 +2,7 @@
   @$IDNO = $_GET['id'];
  @$syid = $_GET['sy'];
   if($IDNO=='' OR $syid==''){
-  redirect("index.php");
+  //redirect("index.php");
 }
   $student = New Student();
   $singlestudent = $student->single_students($IDNO);
@@ -36,7 +36,7 @@
         
           <div class="row">
          <div class="col-lg-12">
-            <h1 class="page-header">Edit Student</h1>
+            <h1 class="page-header">Editar Estudiante</h1>
           </div>
           <!-- /.col-lg-12 -->
        </div>
@@ -47,11 +47,11 @@
                 <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "FNAME">First Name:</label>
+                      "FNAME">Primer Nombre:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="FNAME" name="FNAME" placeholder=
-                            "First Name" type="text" value="<?php echo $singlestudent->FNAME; ?>" required>
+                            "Primer nombre" type="text" value="<?php echo $singlestudent->FNAME; ?>" required>
                       </div>
                     </div>
                   </div>
@@ -59,11 +59,11 @@
                    <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "MNAME">Middle Name:</label>
+                      "MNAME">Segundo Nombre:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="MNAME" name="MNAME" placeholder=
-                            "Middle Name" type="text" value="<?php echo $singlestudent->MNAME; ?>" required>
+                            "Segundo nombre" type="text" value="<?php echo $singlestudent->MNAME; ?>" required>
                       </div>
                     </div>
                   </div>
@@ -71,11 +71,11 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "LNAME">Last Name:</label>
+                      "LNAME">Apellidos:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="LNAME" name="LNAME" placeholder=
-                            "Last Name" type="text" value="<?php echo $singlestudent->LNAME; ?>" required>
+                            "Apellidos" type="text" value="<?php echo $singlestudent->LNAME; ?>" required>
                       </div>
                     </div>
                   </div>
@@ -84,7 +84,7 @@
                       <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "COURSE">Course:</label>
+                      "COURSE">Curso:</label>
 
                       <div class="col-md-8">
                             <select class="form-control input-sm" name="COURSE" id="COURSE"> 
@@ -120,17 +120,21 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "SEMESTER">Semester:</label>
+                      "SEMESTER">Ciclo:</label>
 
                       <div class="col-md-4">
                          <select class="form-control input-sm" name="SEMESTER" id="SEMESTER">
                          <?php  
                           if($singlesy->SEMESTER=='First'){
-                            echo '  <option SELECTED>First</option>
-                                    <option>Second</option> ';
+                            echo '  <option SELECTED>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option> ';
                           }else{
                             echo '  <option >First</option>
-                                    <option SELECTED>Second</option> ';
+                                    <option SELECTED>2</option>
+                                    <option>3</option>
+                                    <option>4</option> ';
 
                           }
                          ?> 
@@ -142,7 +146,7 @@
                        <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "yearpickerfrom">School Year:</label>
+                      "yearpickerfrom">Año escolar:</label>
 
                         <!-- has a limit <div class="col-md-4 input-append date" id="dpYears" data-date="12-02-2012" data-date-format="mm/dd/yyyy" data-date-viewmode="years"> -->
                        <div class="col-md-2 input-append date"    data-date-format="yyyy" data-date-viewmode="years">
@@ -150,7 +154,7 @@
                          <input   class="form-control input-sm" id="date_pickerfrom" name="yearpickerfrom" placeholder="yyyy"   type="text" value="<?php echo $singlesy->SYFROM; ?>" size="4">
                     <!--   <span class="add-on"><i class="glyphicon-calendar"></i></span> -->
                       </div>
-                       <label class="col-md-1 control-label" for=
+                       <br><label class="col-md-1 control-label" for=
                       "To"> To </label>
                         <!-- has a limit <div class="col-md-4 input-append date" id="dpYears" data-date="12-02-2012" data-date-format="mm/dd/yyyy" data-date-viewmode="years"> -->
                        <div class="col-md-2 input-append date"    data-date-format="yyyy" data-date-viewmode="years">
@@ -203,7 +207,7 @@
                    <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "PHONE">Contact No.:</label>
+                      "PHONE">Numero de contacto:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="PHONE" name="PHONE" placeholder=
@@ -215,7 +219,7 @@
                    <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "EMAILADD">Email Address:</label>
+                      "EMAILADD">Correo institucional:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="EMAILADD" name="EMAILADD" placeholder=
@@ -231,8 +235,8 @@
                       "idno"></label>
 
                       <div class="col-md-8">
-                        <button class="btn btn_kcctc" name="save" type="submit" >Save</button> 
-                        <a href="index.php?view=view&id=<?php echo $IDNO; ?>&sy=<?php echo $syid; ?>" class="btn btn_kcctc" name="back" type="submit"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Student Profile</a>
+                        <button class="btn btn_kcctc" name="save" type="submit" >Guardar</button> 
+                        <a href="index.php?view=view&id=<?php echo $IDNO; ?>&sy=<?php echo $syid; ?>" class="btn btn_kcctc" name="back" type="submit"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Pefil Estudiante</a>
                       </div>
                     </div>
                   </div>

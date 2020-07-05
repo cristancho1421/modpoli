@@ -24,13 +24,13 @@ if(!isset($_SESSION['USERID'])){
 		  <source src="<?php echo web_root.'admin/modules/lesson/'.$res->FileLocation; ?>" type="video/ogg"> 
 		</video>
       
-        <div class="col-lg-12">Description</div>
+        <div class="col-lg-12">Descripcion</div>
          <div class="col-lg-12">
-           <label class="col-md-2" class="control-label">Chapter :</label>
+           <label class="col-md-2" class="control-label">Semana:</label>
            <label class="col-md-10" class="control-label"><?php echo $res->LessonChapter; ?></label>
          </div>
          <div class="col-lg-12">
-           <label class="col-md-2" class="control-label">Title : </label>
+           <label class="col-md-2" class="control-label">Titulo:</label>
            <label class="col-md-10" class="control-label"><?php echo $res->LessonTitle; ?></label>
          </div> 
  </div> 

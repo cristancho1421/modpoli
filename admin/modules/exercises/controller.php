@@ -57,7 +57,7 @@ switch ($action) {
 			$autonum->auto_update('ExerciseID');
 
 
-			message("New Question created successfully!", "success");
+			message("Pregunta creada con exito!", "success");
 			redirect("index.php");
 		 
 		}
@@ -85,7 +85,7 @@ switch ($action) {
 			$mydb->executeQuery();
 
 
-			message("Question has been updated!", "success");
+			message("Pregunta actualiza con exito!", "success");
 			redirect("index.php");
 		}
 	}
@@ -103,7 +103,7 @@ switch ($action) {
 				$mydb->setQuery($sql);
 				$mydb->executeQuery();
 			 
-			message("Question already Deleted!","info");
+			message("La pregunta ha sido borrada!","info");
 			redirect('index.php');
 	 
 		

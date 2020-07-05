@@ -43,7 +43,7 @@ switch ($action) {
 			$lesson->Category  = $category;
 			$lesson->create(); 
 
-			message("Lesson has been saved in the database.", "success");
+			message("Clase guardada con exito!.", "success");
 			redirect("index.php");
 			
 		}  
@@ -67,7 +67,7 @@ switch ($action) {
 				// $lesson->FileLocation  = $location;
 				$lesson->update($id); 
 
-				message("Lesson has been saved in the database.", "success");
+				message("Clase guardada con exito!", "success");
 				redirect("index.php");
 		 
 
@@ -84,7 +84,7 @@ switch ($action) {
 			$lesson = New Lesson();
 			$lesson->delete($id);
  
-			message("Lesson has been removed!","info");
+			message("Clase removida con exito!","info");
 			redirect('index.php');
 		 
 		
@@ -103,7 +103,7 @@ switch ($action) {
 				$lesson->FileLocation  = $location;
 				$lesson->update($id); 
 
-				message("File has been updated in the database.", "success");
+				message("Archivo actualizado con exito!", "success");
 				redirect("index.php");
 		 
 
@@ -126,11 +126,11 @@ switch ($action) {
 				 if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
 					return   basename($_FILES["file"]["name"]);
 				}else{
-					echo "Error Uploading File";
+					echo "Error subiendo archivo";
 					exit;
 				}
 			}else{
-					echo "File Not Supported";
+					echo "Archivo no soportado";
 					exit;
 	 }
 } 

@@ -1,9 +1,18 @@
+ <?php 
+  if(!isset($_SESSION['USERID'])){
+  redirect(web_root."admin/index.php");
+}
+
+                      // $autonum = New Autonumber();
+                      // $res = $autonum->single_autonumber(2);
+
+?> 
  <div class="container">
  <form class="form-horizontal span6" action="controller.php?action=add" method="POST" enctype="multipart/form-data">
 
              <div class="row">
          <div class="col-lg-12">
-            <h1 class="page-header">New Student</h1>
+            <h1 class="page-header">Nuevo Estudiante</h1>
           </div>
           <!-- /.col-lg-12 -->
        </div>
@@ -15,7 +24,7 @@
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="IDNO" name="IDNO" placeholder=
-                            "Student Id" type="Text" value="" required>
+                            "Id Estudiante" type="Text" value="" required>
                       </div>
                     </div>
                   </div>
@@ -23,11 +32,11 @@
                 <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "FNAME">First Name:</label>
+                      "FNAME">Primer Nombre:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="FNAME" name="FNAME" placeholder=
-                            "First Name" type="text" value="" required>
+                            "Primer nombre" type="text" value="" required>
                       </div>
                     </div>
                   </div>
@@ -35,11 +44,11 @@
                    <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "MNAME">Middle Name:</label>
+                      "MNAME">Segundo Nombre:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="MNAME" name="MNAME" placeholder=
-                            "Middle Name" type="text" value="" required>
+                            "Segundo nombre" type="text" value="" required>
                       </div>
                     </div>
                   </div>
@@ -47,7 +56,7 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "LNAME">Last Name:</label>
+                      "LNAME">Apellidos:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="LNAME" name="LNAME" placeholder=
@@ -60,7 +69,7 @@
                    <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "COURSE">Course:</label>
+                      "COURSE">Curso:</label>
 
                       <div class="col-md-8">
                             <select class="form-control input-sm" name="COURSE" id="COURSE">
@@ -84,12 +93,14 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "SEMESTER">Semester:</label>
+                      "SEMESTER">Ciclo:</label>
 
                       <div class="col-md-4">
                          <select class="form-control input-sm" name="SEMESTER" id="SEMESTER">
-                           <option>First</option>
-                         <option>Second</option> 
+                           <option>1</option>
+                         <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
                         </select>
                       </div>
                     </div>
@@ -98,7 +109,7 @@
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "yearpickerfrom">School Year:</label>
+                      "yearpickerfrom">Año escolar:</label>
 
                         <!-- has a limit <div class="col-md-4 input-append date" id="dpYears" data-date="12-02-2012" data-date-format="mm/dd/yyyy" data-date-viewmode="years"> -->
                        <div class="col-md-2 input-append date"    data-date-format="yyyy" data-date-viewmode="years">
@@ -106,7 +117,7 @@
                          <input   class="form-control input-sm" id="date_pickerfrom" name="yearpickerfrom" placeholder="yyyy"   type="text" value="" size="4">
                     <!--   <span class="add-on"><i class="glypicon-calendar"></i></span> -->
                       </div>
-                       <label class="col-md-1 control-label" for=
+                       <br><label class="col-md-1 control-label" for=
                       "To"> To </label>
                         <!-- has a limit <div class="col-md-4 input-append date" id="dpYears" data-date="12-02-2012" data-date-format="mm/dd/yyyy" data-date-viewmode="years"> -->
                        <div class="col-md-2 input-append date"    data-date-format="yyyy" data-date-viewmode="years">
@@ -189,7 +200,7 @@
                    <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "PHONE">Contact No.:</label>
+                      "PHONE">Numero de contacto.:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="PHONE" name="PHONE" placeholder=
@@ -201,11 +212,11 @@
                     <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
-                      "EMAILADD">Email Address:</label>
+                      "EMAILADD">Correo institucional:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="EMAILADD" name="EMAILADD" placeholder=
-                            "Example@gmail.com" type="email" value="" required>
+                            "Example@pi.edu.co" type="email" value="" required>
                       </div>
                     </div>
                   </div>
@@ -228,8 +239,8 @@
                       "idno"></label>
 
                       <div class="col-md-8">
-                         <button class="btn btn_kcctc" name="studsave" type="submit" ><strong>Save</strong></button>
-                           <a href="index.php" class="btn btn_kcctc" name="back" type="submit"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;List Of Students</a>
+                         <button class="btn btn_kcctc" name="studsave" type="submit" ><strong>Guardar</strong></button>
+                           <a href="index.php" class="btn btn_kcctc" name="back" type="submit"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Lista de estudiantes</a>
                      </div>
                     </div>
                   </div> 

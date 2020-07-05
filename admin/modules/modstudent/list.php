@@ -7,17 +7,17 @@
 	}
 </style> 
       <div class="module-head"> 
-            <h1 >List of Student</h1> 
-       		 
+            <h1 >Listado de Estudiantes</h1> 
+       		<a href="index.php?view=add" class="btn btn-primary">Nuevo</a> 
        		</div> 
 			    <form action="controller.php?action=delete" Method="POST">  					
 				<table id="example"  class="datatable-1 table table-striped table-bordered table-hover" cellspacing="0" style="font-size:12px" >
 					
 				  <thead>
 				  	<tr>  
-				  		  <th>Name</th>
-				  		  <th>Address</th> 
-				  		<th>Contact#</th>  
+				  		  <th>Nombre</th>
+				  		  <th>Direccion</th> 
+				  		<th>Numero Contacto</th>  
 				  		 
 				  	</tr>	
 				  </thead> 	

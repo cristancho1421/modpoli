@@ -19,11 +19,11 @@ switch ($view) {
 		$content    = 'edit.php';		
 		break;
     case 'playvideo' :
- 		$title="Play Video"; 
+ 		$title="Reproducir Videos"; 
 		$content    = 'playvideo.php';		
 		break;
     case 'viewpdf' :
- 		$title="View File"; 
+ 		$title="Ver Archivos"; 
 		$content    = 'viewpdf.php';		
 		break;
     case 'uploadfile' :

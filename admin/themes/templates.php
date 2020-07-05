@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portal Decentes</title>
+        <title>Portal Docentes</title>
         <link type="text/css" href="<?php echo web_root; ?>e_admin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link type="text/css" href="<?php echo web_root; ?>e_admin/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
         <link type="text/css" href="<?php echo web_root; ?>e_admin/css/theme.css" rel="stylesheet">
@@ -30,13 +30,13 @@
                                 </ul>
                             </li> 
                             <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="images/user.png" class="nav-avatar" />
+                                <img src="img/user.png" class="nav-avatar" />
                                 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Your Profile</a></li>
-                                    <li><a href="#">Edit Profile</a></li> 
+                                    <li><a href="#">Mi Perfil</a></li>
+                                    <li><a href="#">Editar Perfil</a></li> 
                                     <li class="divider"></li>
-                                    <li><a href="<?php echo web_root;?>admin/logout.php">Logout</a></li>
+                                    <li><a href="<?php echo web_root;?>admin/logout.php">Cerrar Sesion</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -53,24 +53,24 @@
                     <div class="span3">
                         <div class="sidebar">
                             <ul class="widget widget-menu unstyled">
-                                <li class="active"><a href="<?php echo web_root; ?>/admin"><i class="menu-icon icon-dashboard"></i>Dashboard
+                                <li class="active"><a href="<?php echo web_root; ?>/admin"><i class="menu-icon icon-dashboard"></i>Portal Inicio
                                 </a></li>
-                                <li><a href="<?php echo web_root; ?>admin/modules/lesson/index.php"><i class="menu-icon icon-bullhorn"></i>Lesson</a>
+                                <li><a href="<?php echo web_root; ?>admin/modules/lesson/index.php"><i class="menu-icon icon-bullhorn"></i>Clases</a>
                                 </li>
-                                <li><a href="<?php echo web_root; ?>admin/modules/exercises/index.php"><i class="menu-icon icon-inbox"></i>Exercises <b class="label green pull-right">
+                                <li><a href="<?php echo web_root; ?>admin/modules/exercises/index.php"><i class="menu-icon icon-inbox"></i>Ejercicios <b class="label green pull-right">
                                     11</b> </a></li> 
                             </ul>
                             <!--/.widget-nav-->
                             
                             
                             <ul class="widget widget-menu unstyled">
-                                <li><a href="<?php echo web_root; ?>admin/modules/galery/index.php"><i class="menu-icon icon-bold"></i> Galery </a></li>
-                                <li><a href="<?php echo web_root; ?>admin/modules/modstudent/index.php"><i class="menu-icon icon-bold"></i> Manage Students </a></li>
-                                <li><a href="<?php echo web_root; ?>admin/modules/user/index.php"><i class="menu-icon icon-book"></i>Manage Users </a></li> 
+                                <li><a href="<?php echo web_root; ?>admin/modules/galery/index.php"><i class="menu-icon icon-bold"></i> Galeria - Videos </a></li>
+                                <li><a href="<?php echo web_root; ?>admin/modules/modstudent/index.php"><i class="menu-icon icon-bold"></i> Estudiantes </a></li>
+                                <li><a href="<?php echo web_root; ?>admin/modules/user/index.php"><i class="menu-icon icon-book"></i> Usuarios </a></li> 
                             </ul>
                             <!--/.widget-nav-->
                             <ul class="widget widget-menu unstyled"> 
-                                <li><a href="<?php echo web_root;?>admin/logout.php"><i class="menu-icon icon-signout"></i>Logout </a></li>
+                                <li><a href="<?php echo web_root;?>admin/logout.php"><i class="menu-icon icon-signout"></i>Cerrar Sesion</a></li>
                             </ul>
                         </div>
                         <!--/.sidebar-->

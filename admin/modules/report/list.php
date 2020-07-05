@@ -6,6 +6,6 @@
 ?>
 <div class="container">
  <div class="row">
- 	<h1>Under Developement</h1>
+ 	<h1>En desarrollo</h1>
  </div>
 </div>

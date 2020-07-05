@@ -5,16 +5,16 @@
 
 ?> 
       <div class="module-head"> 
-            <h1 class="page-header">List of Users <a href="index.php?view=add" class="btn btn-primary">New</a></h1> 
+            <h1 class="page-header">Lista de Usuarios <a href="index.php?view=add" class="btn btn-primary">Nuevo</a></h1> 
        		 
        		</div> 
 			    <form action="controller.php?action=delete" Method="POST">  					
 				<table id="example" class="datatable-1 table table-hover table-bordered" cellspacing="0" style="font-size:12px" > 
 				  <thead>
 				  	<tr> 
-				  		<th> Account Name</th>
-				  		<th>Username</th>
-				  		<th width="10%">Action</th> 
+				  		<th>Nombre cuentas</th>
+				  		<th>Nombre de Usuarios</th>
+				  		<th width="10%">Accion</th> 
 				  	</tr>	
 				  </thead> 
 				  <tbody>
@@ -30,8 +30,8 @@
 				  		echo '<td>' . $result->NAME.'</a></td>';
 				  		echo '<td>'. $result->UEMAIL.'</td>';
 				  		// echo '<td>'. $result->TYPE.'</td>';
-				  		echo '<td > <a title="Edit" href="index.php?view=edit&id='.$result->USERID.'" class="btn btn-primary btn-xs" >Edit</a>
-				  					 <a title="Delete" href="controller.php?action=delete&id='.$result->USERID.'" class="btn btn-danger btn-xs" >Delete</a>
+				  		echo '<td > <a title="Edit" href="index.php?view=edit&id='.$result->USERID.'" class="btn btn-primary btn-xs" >Editar</a>
+				  					 <a title="Delete" href="controller.php?action=delete&id='.$result->USERID.'" class="btn btn-danger btn-xs" >Borrar Usuario</a>
 				  					 </td>';
 				  		echo '</tr>';
 				  	} 

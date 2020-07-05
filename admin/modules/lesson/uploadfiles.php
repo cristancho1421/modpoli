@@ -16,7 +16,7 @@
 
            <div class="row">
          <div class="col-lg-12">
-            <h1 class="page-header">Update Files</h1>
+            <h1 class="page-header">Cambiar Archivos</h1>
           </div>
           <!-- /.col-lg-12 -->
        </div> 
@@ -24,7 +24,7 @@
         <div class="form-group">
                     <div class="col-md-11">
                       <label class="col-md-2 control-label" for=
-                      "LessonChapter">Chapter:</label>
+                      "LessonChapter">Clase:</label>
 
                       <div class="col-md-10">
                         <input name="LessonID" type="hidden" value="<?php echo $res->LessonID; ?>">
@@ -36,7 +36,7 @@
                    <div class="form-group">
                     <div class="col-md-11">
                       <label class="col-md-2 control-label" for=
-                      "LessonTitle">Title:</label>
+                      "LessonTitle">Titulo:</label>
 
                       <div class="col-md-10">
                         <input name="deptid" type="hidden" value="">
@@ -48,7 +48,7 @@
                   <div class="form-group">
                     <div class="col-md-11">
                       <label class="col-md-2 control-label" for=
-                      "Category">File Type:</label>
+                      "Category">Tipo de archivo:</label>
 
                       <div class="col-md-10">
                         <input name="deptid" type="hidden" value="">
@@ -61,7 +61,7 @@
              <div class="form-group">
               <div class="col-md-11">
                 <label class="col-md-2" align = "right"for=
-                "file">Upload File:</label>
+                "file">Archivo:</label>
 
                 <div class="col-md-10"> 
                 <input type="file" name="file" value="<?php echo $res->FileLocation; ?>" />
@@ -75,7 +75,7 @@
                       "idno"></label>
 
                       <div class="col-md-10">
-                       <button class="btn btn-primary btn-sm" name="save" type="submit" ><span class="fa fa-save fw-fa"></span>  Save</button> 
+                       <button class="btn btn-primary btn-sm" name="save" type="submit" ><span class="fa fa-save fw-fa"></span>Guardar</button> 
                          </div>
                     </div>
                   </div> 

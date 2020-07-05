@@ -24,7 +24,7 @@
   
 <div class="row">
          <div class="col-lg-12">
-            <h1 class="page-header">Student Profile</h1>
+            <h1 class="page-header">Perfil Estudiante</h1>
           </div>
           <!-- /.col-lg-12 -->
        </div>
@@ -42,11 +42,11 @@
           <ul class="list-group">
        
          
-            <li class="list-group-item text-muted">Photo</li>
+            <li class="list-group-item text-muted">Foto</li>
            <!--  <li class="list-group-item text-right"><span class="pull-left"><strong>Joined</strong></span> 2.13.2014</li>
             <li class="list-group-item text-right"><span class="pull-left"><strong>Last seen</strong></span> Yesterday</li> -->
             <li class="list-group-item text-right">
-            <span class="pull-left"><strong>Real name</strong></span> 
+            <span class="pull-left"><strong>Nombre</strong></span> 
             <strong><?php echo $singlestudent->FNAME .'  '.$singlestudent->LNAME; ?></strong>
             </li>
             
@@ -65,9 +65,9 @@
           <h2> <?php echo $singlestudent->FNAME .' '.$singlestudent->MNAME.' '.$singlestudent->LNAME; ?>  </h2>
 
           <ul class="nav nav-tabs " id="myTab">
-            <li class="active"><a href="#basicInfo" data-toggle="tab">Information</a></li>
+            <li class="active"><a href="#basicInfo" data-toggle="tab">Informacion</a></li>
             <!-- <li><a href="#parent" data-toggle="tab">Other Information</a></li> -->
-            <li><a href="#workstat" data-toggle="tab">Work Status</a></li>
+            <li><a href="#workstat" data-toggle="tab">Estado de trabajos</a></li>
             
           </ul>
               
@@ -86,13 +86,13 @@
                     </div>
                     <div class="col-xs-12 col-sm-4 col-md-4">
                       <div class="form-group ">
-                      <strong>Course </strong>
+                      <strong>Curso </strong>
                       <?php echo ': '.$singlecourse->DESCRIPTION.'('.$singlecourse->COURSE.')'; ?>
                       </div> 
                     </div>
                     <div class="col-xs-12 col-sm-4 col-md-4">
                       <div class="form-group ">
-                      <strong>School Year </strong>
+                      <strong>Año escolar </strong>
                       <?php echo ': '.$singlesy->SYFROM .'-'.$singlesy->SYTO; ?>
                       </div> 
                     </div>
@@ -103,19 +103,19 @@
                     <div class="row">
                     <div class="col-xs-12 col-sm-4 col-md-4">
                       <div class="form-group ">
-                      <strong>First Name </strong> 
+                      <strong>Primer Nombre</strong> 
                      <?php echo ': '.$singlestudent->FNAME; ?>   
                       </div>
                     </div>
                     <div class="col-xs-12 col-sm-4 col-md-4">
                       <div class="form-group">
-                        <strong>Last Name </strong>
+                        <strong>Apellidos</strong>
                     <?php echo ': '.$singlestudent->LNAME; ?> 
                       </div>
                     </div>
                    <div class="col-xs-12 col-sm-4 col-md-4">
                       <div class="form-group">
-                        <strong>Middle Name </strong>
+                        <strong>Segundo Nombre</strong>
                     <?php echo ': '.$singlestudent->MNAME; ?> 
                       </div>
                     </div>
@@ -124,7 +124,7 @@
 
                   <li class="list-unstyled text-left">
                   <div class="form-group ">
-                  <strong>Address </strong>
+                  <strong>Direccion </strong>
                   <?php echo ': '.$singlestudent->ADDRESS; ?> 
                   </div>
                 </li> 
@@ -133,13 +133,13 @@
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
                       <div class="form-group ">
-                        <strong>Email Address </strong>
+                        <strong>Correo Institucional </strong>
                          <?php echo ': '.$singlestudent->EMAILADD; ?>
                     </div>
                    </div>
                    <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="form-group ">
-                      <strong>Contact Number</strong>
+                      <strong>Numero de contacto</strong>
                          <?php echo ': '.$singlestudent->PHONE; ?>
                      </div>
                     </div>
@@ -150,13 +150,13 @@
                     <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
                       <div class="form-group ">
-                      <strong>Father</strong> 
+                      <strong>Padre</strong> 
                      <?php echo ': '.$singleparents->FATHER; ?>   
                       </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6">
                       <div class="form-group">
-                        <strong>Occupation</strong>
+                        <strong>Ocupacion</strong>
                     <?php echo ': '.$singleparents->FOCCUPATION; ?> 
                       </div>
                     </div>
@@ -167,13 +167,13 @@
                     <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
                       <div class="form-group ">
-                      <strong>Mother</strong> 
+                      <strong>Madre</strong> 
                      <?php echo ': '.$singleparents->MOTHER; ?>   
                       </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6">
                       <div class="form-group">
-                        <strong>Occupation</strong>
+                        <strong>Ocupacion</strong>
                     <?php echo ': '.$singleparents->MOCCUPATION; ?> 
                       </div>
                     </div>
@@ -184,13 +184,13 @@
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
                       <div class="form-group ">
-                        <strong>Rank in the Family</strong> 
+                        <strong>Grado en la familia</strong> 
                         <?php echo ': '.$singleparents->RANKFAMILY; ?>
                         </div>
                     </div> 
                     <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="form-group ">
-                      <strong>Disability</strong> 
+                      <strong>Inhabilidad</strong> 
                         <?php echo ': '.$singleparents->DISABILITY; ?>
                         </div>
                         </div>
@@ -208,11 +208,11 @@
                 <table   class="table table-hover"  > 
                   <thead> 
                         <!-- <th>No.</th> -->
-                        <th>Company</th>
-                        <th >Address</th>                       
-                        <th  >Status</th>
-                        <th >Hired Date</th>
-                        <th >Annual Income</th>   
+                        <th>Compañia</th>
+                        <th >Direccion</th>                       
+                        <th  >Estado</th>
+                        <th >Fecha de contrado</th>
+                        <th >Ingresos anuales</th>   
                    
                   </thead>   
               <tbody>
@@ -280,7 +280,7 @@
                                     <button class="close" data-dismiss="modal" type=
                                     "button">×</button>
 
-                                    <h4 class="modal-title" id="myModalLabel">Choose Image.</h4>
+                                    <h4 class="modal-title" id="myModalLabel">Escoger Imagen</h4>
                                 </div>
 
                                 <form action="controller.php?action=photos" enctype="multipart/form-data" method=
@@ -309,7 +309,7 @@
                                     <div class="modal-footer">
                                         <button class="btn btn-default" data-dismiss="modal" type=
                                         "button">Close</button> <button class="btn btn-primary"
-                                        name="savephoto" type="submit">Upload Photo</button>
+                                        name="savephoto" type="submit">Subir Foto</button>
                                     </div>
                                 </form>
                             </div><!-- /.modal-content -->

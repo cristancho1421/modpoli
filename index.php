@@ -28,7 +28,7 @@ switch ($view) {
    # code...
    break; 
   case 'playvideo':
-    $title = "Play Video";
+    $title = "Reproducir Video";
     $content = 'playvideo.php';
    # code...
    break; 
@@ -37,7 +37,7 @@ switch ($view) {
     $content = 'viewpdf.php';
    # code...
    break; 
-  case 'question':
+  case 'Preguntas':
     $title = "Question";
     $content = 'question.php';
    # code...

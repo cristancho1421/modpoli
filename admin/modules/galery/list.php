@@ -2,30 +2,30 @@
 <!-- Video Gallery - START -->
 <div class="container-fluid pb-video-container">
     <div class="col-md-10 col-md-offset-1">
-        <h3 class="text-center">Video Gallery</h3> 
+        <h3 class="text-center">Galeria - Videos</h3>
+        
+        <?php 
+            
+            $mydb->setQuery("SELECT * FROM `tbllesson` ");
+            $cur = $mydb->loadResultList();
 
-                     <?php 
-                       
-                        $mydb->setQuery("SELECT * FROM `tbllesson` ");
-                        $cur = $mydb->loadResultList();
+            foreach ($cur as $result) {  
 
-                        foreach ($cur as $result) {  
-
-                            if ($result->Category=='Video') {
+                if ($result->Category=='Video') {
 
 
-            ?>          
-                            <div class="span4"> 
-                                <div class="stretch">
-                                    <video    controls class="pb-video-frame">
-                                      <source src="<?php echo web_root.'admin/modules/lesson/'.$result->FileLocation; ?>" type="video/mp4">
-                                      <source class="pb-video-frame" src="<?php echo web_root.'admin/modules/lesson/'.$result->FileLocation; ?>" type="video/ogg"> 
-                                    </video> 
-                                </div>
-                            </div>
-                 
-         
-            <?php
+    ?>          
+                <div class="span4"> 
+                    <div class="stretch">
+                        <video    controls class="pb-video-frame">
+                            <source src="<?php echo web_root.'admin/modules/lesson/'.$result->FileLocation; ?>" type="video/mp4">
+                            <source class="pb-video-frame" src="<?php echo web_root.'admin/modules/lesson/'.$result->FileLocation; ?>" type="video/ogg"> 
+                        </video> 
+                    </div>
+                </div>
+        
+
+    <?php
                             }
                         } 
             ?>

@@ -1,0 +1,72 @@
+span{
+    font-weight: bold;
+}
+
+p{
+    line-height: 1.4;
+    font-style: normal;
+    text-align: justify;
+    font-size: 19px;
+    font-family: 'Catamaran', sans-serif;
+    
+}
+.contenedor{
+    width: 95%;
+    max-width: 70rem; 
+    margin: 0 auto;
+}
+.pagina-titulo{
+    font-size: 34px;
+    width: 734px;
+    height: 120px;
+    border: none;
+    display: table-cell;
+    height: 70px;
+vertical-align: middle;
+padding-top: 0;
+padding-bottom: 0;
+color: #005a9b !important;
+}
+
+#texto{
+    width:500px;
+	height:300px;
+	line-height:300px;
+	border:1px solid;
+    text-align:center;
+    
+
+}
+.texto > span{
+    width:500px;
+    height:300px;
+    line-height:300px;
+    border:1px solid;
+    text-align:center;
+}
+
+#imagenes{
+    width: 400px;
+    height: 700px;
+    border: 1px solid;
+    text-align: left;
+}
+
+.mapa{
+    width: 400px;
+    height: 300px;
+    float:right;
+    margin-right: 250px;
+    margin-top: -250px;
+}
+
+.quienes-somos{
+    display: flex; 
+    justify-content: space-between;
+    padding: 3rem 0;
+    
+
+}
+.quienes-somos .texto{
+    flex-basis: calc(58% - .5rem);
+}

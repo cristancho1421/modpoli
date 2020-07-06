@@ -1,12 +1,13 @@
-<h1 CLASS=" titulos "><?php echo $title;?></h1>
-<div class="col-lg-12">
+
+<div class="col-lg-12 ord">
+	<h1 CLASS=" titulos "><?php echo $title;?></h1>
 	<div class="table-responsive tablas-fondo">
 		<table id="example" class="table table-bordered">
 			<thead>
 				<th width="2%">#</th>
-				<th>Chapter</th>
-				<th>Title</th> 
-				<th width="10%">Action</th>
+				<th>Clase</th>
+				<th>Titulo</th> 
+				<th width="10%">Accion</th>
 			</thead>
 			<tbody>
 				<?php 

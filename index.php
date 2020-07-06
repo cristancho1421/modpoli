@@ -13,17 +13,17 @@ switch ($view) {
    # code...
    break; 
   case 'exercises':
-    $title = "Exercises";
+    $title = "Ejercicios";
     $content = 'exercises.php';
    # code...
    break; 
   case 'download':
-    $title = "Download";
+    $title = "Descargas";
     $content = 'download.php';
    # code...
    break; 
   case 'about':
-    $title = "About Us";
+    $title = "Acerca De";
     $content = 'about.php';
    # code...
    break; 
@@ -37,16 +37,26 @@ switch ($view) {
     $content = 'viewpdf.php';
    # code...
    break; 
-  case 'Preguntas':
-    $title = "Question";
+  case 'question':
+    $title = "Preguntas";
     $content = 'question.php';
    # code...
    break; 
   case 'quizresult':
-    $title = "Result";
+    $title = "Resultados";
     $content = 'quizresult.php';
    # code...
    break; 
+   case 'quienessomos':
+    $title ="Quienes Somos";
+    $content = "quienessomos.php";
+    # code...
+  break;
+  case 'lainstitucion':
+    $title ="La Institucion";
+    $content = "lainstitucion.php";
+    # code...
+  break;
   default :
     $title = "Home";
     $content    = 'home.php';

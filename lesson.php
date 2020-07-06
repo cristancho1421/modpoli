@@ -1,13 +1,14 @@
-<h1 class="titulos"><?php echo $title; ?></h1>
-<div class="col-lg-6">
+
+<div class="col-lg-12 ord">
+	<h1 class="titulos"><?php echo $title; ?></h1>
 	<h3 class="titulos">PDF</h3>
 	<div class="table-responsiv tablas-fondo">
 		<table id="example" class="table table-bordered ">
 			<thead>
 				<th width="2%">#</th>
-				<th>Chapter</th>
-				<th>Title</th>
-				<th width="2%">Action</th>
+				<th>Clase</th>
+				<th>Titulo</th>
+				<th width="2%">Accion</th>
 			</thead>
 			<tbody>
 				<?php
@@ -28,14 +29,14 @@
 		</table>
 	</div>
 </div>
-<div class="col-lg-6">
-	<h3 class="titulos">VIDEO</h3>
+<div class="col-lg-12 ord">
+	<h3 class="titulos">Video</h3>
 	<div class="table-responsive tablas-fondo">
 		<table id="example2" class="table table-bordered">
 			<thead>
 				<th width="2%">#</th>
-				<th>Decription</th>
-				<th width="2%">Action</th>
+				<th>Descripcion</th>
+				<th width="2%">Accion</th>
 			</thead>
 			<tbody>
 				<?php
@@ -55,14 +56,14 @@
 		</table>
 	</div>
 </div>
-<div class="col-lg-6">
-	<h3 class="titulos">SIMULACIÓN</h3>
+<div class="col-lg-12 ord">
+	<h3 class="titulos">Simulacion</h3>
 	<div class="table-responsive tablas-fondo">
 		<table id="example2" class="table table-bordered">
 			<thead>
 				<th width="2%">#</th>
-				<th>Decription</th>
-				<th width="2%">Action</th>
+				<th>Descripcion</th>
+				<th width="2%">Accion</th>
 			</thead>
 			<tbody>
 				<?php

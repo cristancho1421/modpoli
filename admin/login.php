@@ -87,6 +87,11 @@ require_once("../include/initialize.php");
                 olvidaste tu contraseña?
               </a>
             </div>
+            <div>
+              <a class="txt2" href="/E-LearningSystem/login.php">
+                Portal Estudiantes
+                <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+              </a></div>
           </div>
 
           <div class="container-login100-form-btn">

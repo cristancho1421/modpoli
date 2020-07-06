@@ -29,9 +29,8 @@
                                     <li><a href="<?php echo web_root;?>admin/modules/lesson/index.php?view=add">Lecciones</a></li> 
                                 </ul>
                             </li> 
-                            <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="img/user.png" class="nav-avatar" />
-                                <b class="caret"></b></a>
+                            <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Cuenta
+                            <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Mi Perfil</a></li>
                                     <li><a href="#">Editar Perfil</a></li> 

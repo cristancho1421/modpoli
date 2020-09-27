@@ -39,22 +39,16 @@ require_once("../include/initialize.php");
 </head>
 
 <body>
-
-
-  
   <div class="limiter">
     <div class="container-login100">
       <div class="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
         <form class="login100-form validate-form flex-sb flex-w" method="POST" action="login.php">
-        <div class="img-logo-login" data-tilte>
-          <img src="<?php echo web_root; ?>images/logo-polinternacional.png" alt="logopoli" >
-        </div>
+          <div class="img-logo-login" data-tilte>
+            <img src="<?php echo web_root; ?>images/logo-polinternacional.png" alt="logopoli" >
+          </div>
           <span class="login100-form-title p-b-32">
-          
             Ingreso Administrador
-           
           </span>
-          
           <span class="txt1 p-b-11">
             Usuario
           </span>
@@ -62,7 +56,6 @@ require_once("../include/initialize.php");
             <input class="input100" type="text" name="user_email" >
             <span class="focus-input100"></span>
           </div>
-          
           <span class="txt1 p-b-11">
             Contraseña
           </span>
@@ -98,18 +91,12 @@ require_once("../include/initialize.php");
             <button type="submit" class="login100-form-btn" name="btnLogin">
               Ingresar
             </button>
-       
           </div>
-          
-
         </form>
-        
       </div>
     </div>
   </div>
   
-  
-
   <div id="dropDownSelect1"></div>
   
 <!--===============================================================================================-->
@@ -133,33 +120,40 @@ require_once("../include/initialize.php");
 </html>
  
 <?php
+  if(isset($_POST['btnLogin']))
+  {
+    $email = trim($_POST['user_email']);
+    $upass  = trim($_POST['user_pass']);
+    $h_upass = sha1($upass);
 
-if(isset($_POST['btnLogin'])){
-  $email = trim($_POST['user_email']);
-  $upass  = trim($_POST['user_pass']);
-  $h_upass = sha1($upass);
-
-   if ($email == '' OR $upass == '') {
-
-      message("Invalid Username and Password!", "error");
+    if ($email == '' OR $upass == '') 
+    {
+      message("Nombre de usuario o contraseña Invalidos!", "error");
       redirect("login.php");
-
-    } else {
-  //it creates a new objects of member
+    } 
+    else 
+    {
+    //it creates a new objects of member
     $user = new User();
     //make use of the static function, and we passed to parameters
     $res = $user::userAuthentication($email, $h_upass);
-    if ($res==true) {
-       message("You login as ".$_SESSION['TYPE'].".","success");
-      if ($_SESSION['TYPE']=='Administrator'){
-         redirect(web_root."admin/index.php");
-      }else{
-           redirect(web_root."admin/login.php");
+    if ($res==true) 
+    {
+      message("Has ingresado como".$_SESSION['TYPE'].".","satisfactoriamente");
+      if ($_SESSION['TYPE']=='Administrator')
+      {
+        redirect(web_root."admin/index.php");
       }
-    }else{
-      message("Account does not exist! Please contact Administrator.", "error");
-       redirect(web_root."admin/login.php");
+      else
+      {
+        redirect(web_root."admin/login.php");
+      }
     }
- }
- }
- ?> 
+    else
+    {
+      message("Esta cuenta no existe! Por favor contacte al Administrador.", "error");
+      redirect(web_root."admin/login.php");
+    }
+}
+}
+?> 

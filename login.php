@@ -96,21 +96,25 @@ if (isset($_SESSION['StudentID'])) {
     $upass  = trim($_POST['user_pass']);
     $h_upass = sha1($upass);
 
-    if ($email == '' or $upass == '') {
-
-      message("Invalid Username and Password!", "error");
+    if ($email == '' or $upass == '') 
+    {
+      message("Nombre de usuario y contraseña incorrectos!", "error");
       redirect(web_root . "login.php");
-    } else {
+    } 
+    else 
+    {
       //it creates a new objects of member
       $student = new Student();
       //make use of the static function, and we passed to parameters
       $res = $student::studentAuthentication($email, $h_upass);
-      if ($res == true) {
-        // redirect(web_root."index.php"); 
-
+      if ($res == true) 
+      {
+        redirect(web_root."index.php");
         echo $_SESSION['StudentID'];
-      } else {
-        message("Account does not exist! Please contact Administrator.", "error");
+      } 
+      else 
+      {
+        message("Cuenta no existe! Contacte al Administrador.", "error");
         redirect(web_root . "admin/modules/autonumber/list.php");
       }
     }

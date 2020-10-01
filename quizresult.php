@@ -2,12 +2,12 @@
 $studentid = $_SESSION['StudentID'];
 	if (isset($_GET['score'])) {
 		# code...
-		echo	$score = '<h1>Your Score is : ' . $_GET['score'].'</h1>';
+		echo	$score = '<h1>Tu Calificacion es : ' . $_GET['score'].'</h1>';
 	}
 
 ?>
-<h1>Question</h1>
-<h5>Choose the correct answer.</h5>
+<h1>Preguntas</h1>
+<h5>Preguntas de seleccion multiple con unica respuesta</h5>
 <div style="height:250px;overflow-y:auto;"> 
 <?php  
 
@@ -25,9 +25,6 @@ redirect("index.php");
   	$sql = "SELECT * FROM tblscore s,tblexercise e WHERE s.ExerciseID=e.ExerciseID AND e.ExerciseID='{$res->ExerciseID}' and StudentID='{$studentid}'";
   	$mydb->setQuery($sql);
   	$ans = $mydb->loadSingleResult();
-
-  	 
- 
 ?> 
 <form> 
 <div><?php echo $res->Question ; ?></div>

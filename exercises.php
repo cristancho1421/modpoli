@@ -20,7 +20,7 @@
 					echo '<td></td>';
 					echo '<td>'.$result->LessonChapter.'</td>';
 					echo '<td>'.$result->LessonTitle.'</td>';
-					echo '<td><a href="index.php?q=question&id='.$result->LessonID.'" class="btn btn-xs btn-info">View Exercises</a></td>';
+					echo '<td><a href="index.php?q=question&id='.$result->LessonID.'" class="btn btn-xs btn-info">Ver Ejercicio</a></td>';
 					echo '</tr>';
 				}
 				?>

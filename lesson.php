@@ -12,7 +12,7 @@
 			</thead>
 			<tbody>
 				<?php
-				$sql = "SELECT * FROM tbllesson WHERE Category='Docs'";
+				$sql = "SELECT * FROM tbllesson WHERE Category='Documento'";
 				$mydb->setQuery($sql);
 				$cur = $mydb->loadResultList();
 				foreach ($cur as $result) {
@@ -21,7 +21,7 @@
 					echo '<td></td>';
 					echo '<td>' . $result->LessonChapter . '</td>';
 					echo '<td>' . $result->LessonTitle . '</td>';
-					echo '<td><a href="index.php?q=viewpdf&id=' . $result->LessonID . '" class="btn btn-xs btn-info"><i class="fa fa-info"></i> View File</a></td>';
+					echo '<td><a href="index.php?q=viewpdf&id=' . $result->LessonID . '" class="btn btn-xs btn-info"><i class="fa fa-info"></i> Ver Archivo </a></td>';
 					echo '</tr>';
 				}
 				?>
@@ -48,7 +48,7 @@
 					echo '<tr>';
 					echo '<td></td>';
 					echo '<td>' . $result->LessonTitle . '</td>';
-					echo '<td><a href="index.php?q=playvideo&id=' . $result->LessonID . '" class="btn btn-xs btn-info"><i class="fa fa-play"></i> Play Video</a></td>';
+					echo '<td><a href="index.php?q=playvideo&id=' . $result->LessonID . '" class="btn btn-xs btn-info"><i class="fa fa-play"></i> Reproducir Video</a></td>';
 					echo '</tr>';
 				}
 				?>

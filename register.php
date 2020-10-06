@@ -19,7 +19,7 @@ if (isset($_SESSION['StudentID'])) {
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Au Register Forms by Colorlib</title>
+    <title>Registro Estudiantes</title>
 
     <!-- Icons font CSS-->
     <link href="<?php echo web_root;?>plugins/registration/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -41,32 +41,32 @@ if (isset($_SESSION['StudentID'])) {
             <div class="card card-1">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Registration Info</h2>
+                    <h2 class="title">Informacion de Registro</h2>
                     <form method="POST" action="register.php">
                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="Firstname" name="FNAME">
+                            <input class="input--style-1" type="text" placeholder="Primer Nombre" name="FNAME">
                         </div>
 
                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="Lastname" name="LNAME">
+                            <input class="input--style-1" type="text" placeholder="Apellidos" name="LNAME">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="Address" name="ADDRESS">
+                            <input class="input--style-1" type="text" placeholder="Direccion" name="ADDRESS">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-1" type="number" placeholder="Phone" name="PHONE">
+                            <input class="input--style-1" type="number" placeholder="Telefono" name="PHONE">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="Username" name="USERNAME">
+                            <input class="input--style-1" type="text" placeholder="Nombre de usuario" name="USERNAME">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-1" type="password" placeholder="Password" name="PASS">
+                            <input class="input--style-1" type="password" placeholder="Contraseña" name="PASS">
                         </div>
 
                       
                         <div class="p-t-20">
-                            <button class="btn btn--radius btn--green" type="submit" name="btnRegister">Submit</button>
-                            <a href="login.php">Back to Login</a>
+                            <button class="btn btn--radius btn--green" type="submit" name="btnRegister">Registrarse</button>
+                            <br><br><a href="login.php">ir a Atras..</a>
                         </div>
                     </form>
                 </div>
@@ -105,8 +105,8 @@ if (isset($_POST['btnRegister'])) {
     $student->STUDPASS      = sha1($_POST['PASS']); 
     $student->create();  
 
-    message("Your now succefully registered. You can login now!","success");
-    redirect("register.php");
+    message("Tu registro fue exitoso. Ya puedes ingresar!","success");
+    redirect("login.php");
 
 }
 

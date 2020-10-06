@@ -7,7 +7,7 @@
 				<th width="2%">#</th>
 				<th>Clase</th>
 				<th>Titulo</th> 
-				<th width="10%">Accion</th>
+				<th width="15%">Accion</th>
 			</thead>
 			<tbody>
 				<?php 
@@ -20,7 +20,7 @@
 					echo '<td></td>';
 					echo '<td>'.$result->LessonChapter.'</td>';
 					echo '<td>'.$result->LessonTitle.'</td>';
-					echo '<td><a href="index.php?q=question&id='.$result->LessonID.'" class="btn btn-xs btn-info">Ver Ejercicio</a></td>';
+					echo '<td><a href="index.php?q=question&id='.$result->LessonID.'" class="btn btn-xs btn-primary">Ver Ejercicio</a></td>';
 					echo '</tr>';
 				}
 				?>

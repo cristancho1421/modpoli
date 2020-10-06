@@ -21,7 +21,7 @@
 						echo '<td></td>';
 						echo '<td>' . $result->LessonChapter . '</td>';
 						echo '<td>' . $result->LessonTitle . '</td>';
-						echo '<td><a href="' . web_root . 'admin/modules/lesson/' . $result->FileLocation . '" class="btn btn-xs btn-info" download><i class="fa fa-download"></i> Downlaod</a></td>';
+						echo '<td><a href="' . web_root . 'admin/modules/lesson/' . $result->FileLocation . '" class="btn btn-xs btn-info" download>Descargar Archivo<i class="fa fa-download"></i></a></td>';
 						echo '</tr>';
 					}
 					?>
@@ -48,7 +48,7 @@
 						echo '<tr>';
 						echo '<td></td>';
 						echo '<td>' . $result->LessonTitle . '</td>';
-						echo '<td><a href="' . web_root . 'admin/modules/lesson/' . $result->FileLocation . '" class="btn btn-xs btn-info" download><i class="fa fa-download"></i> Downlaod</a></td>';
+						echo '<td><a href="' . web_root . 'admin/modules/lesson/' . $result->FileLocation . '" class="btn btn-xs btn-info" download></i>Descargar Archivo&nbsp;<i class="fa fa-download"></a></td>';
 						echo '</tr>';
 					}
 					?>
@@ -75,7 +75,7 @@
 						echo '<tr>';
 						echo '<td></td>';
 						echo '<td>' . $result->LessonTitle . '</td>';
-						echo '<td><a href="' . web_root . 'admin/modules/lesson/' . $result->FileLocation . '" class="btn btn-xs btn-info" download><i class="fa fa-download"></i> Downlaod</a></td>';
+						echo '<td><a href="' . web_root . 'admin/modules/lesson/' . $result->FileLocation . '" class="btn btn-xs btn-info" download><i class="fa fa-download"></i>Descargar Archivo</a></td>';
 						echo '</tr>';
 					}
 					?>

@@ -8,11 +8,11 @@
 					<th width="2%">#</th>
 					<th>Clase</th>
 					<th>Titulo</th>
-					<th width="10%">Accion</th>
+					<th width="15%">Accion</th>
 				</thead>
 				<tbody>
 					<?php
-					$sql = "SELECT * FROM tbllesson WHERE Category='Docs'";
+					$sql = "SELECT * FROM tbllesson WHERE Category='Documento'";
 					$mydb->setQuery($sql);
 					$cur = $mydb->loadResultList();
 					foreach ($cur as $result) {
@@ -21,7 +21,7 @@
 						echo '<td></td>';
 						echo '<td>' . $result->LessonChapter . '</td>';
 						echo '<td>' . $result->LessonTitle . '</td>';
-						echo '<td><a href="' . web_root . 'admin/modules/lesson/' . $result->FileLocation . '" class="btn btn-xs btn-info" download>Descargar Archivo<i class="fa fa-download"></i></a></td>';
+						echo '<td><a href="' . web_root . 'admin/modules/lesson/' . $result->FileLocation . '" class="btn btn-xs btn-info" download>Descargar Archivo&nbsp;<i class="fa fa-download"></i></a></td>';
 						echo '</tr>';
 					}
 					?>
@@ -36,7 +36,7 @@
 				<thead>
 					<th width="2%">#</th>
 					<th>Descripcion</th>
-					<th width="10%">Accion</th>
+					<th width="15%">Accion</th>
 				</thead>
 				<tbody>
 					<?php
@@ -63,11 +63,11 @@
 				<thead>
 					<th width="2%">#</th>
 					<th>Descripcion</th>
-					<th width="10%">Accion</th>
+					<th width="15%">Accion</th>
 				</thead>
 				<tbody>
 					<?php
-					$sql = "SELECT * FROM tbllesson WHERE Category='Video'";
+					$sql = "SELECT * FROM tbllesson WHERE Category='Simulador'";
 					$mydb->setQuery($sql);
 					$cur = $mydb->loadResultList();
 					foreach ($cur as $result) {
@@ -75,7 +75,7 @@
 						echo '<tr>';
 						echo '<td></td>';
 						echo '<td>' . $result->LessonTitle . '</td>';
-						echo '<td><a href="' . web_root . 'admin/modules/lesson/' . $result->FileLocation . '" class="btn btn-xs btn-info" download><i class="fa fa-download"></i>Descargar Archivo</a></td>';
+						echo '<td><a href="' . web_root . 'admin/modules/lesson/' . $result->FileLocation . '" class="btn btn-xs btn-info" download><i class="fa fa-download"></i>&nbsp;Descargar Archivo</a></td>';
 						echo '</tr>';
 					}
 					?>

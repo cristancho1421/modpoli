@@ -54,18 +54,61 @@
                             <ul class="widget widget-menu unstyled">
                                 <li class="active"><a href="<?php echo web_root; ?>/admin"><i class="menu-icon icon-dashboard"></i>Portal Inicio
                                 </a></li>
-                                <li><a href="<?php echo web_root; ?>admin/modules/lesson/index.php"><i class="menu-icon icon-bullhorn"></i>Clases</a>
-                                </li>
-                                <li><a href="<?php echo web_root; ?>admin/modules/exercises/index.php"><i class="menu-icon icon-inbox"></i>Ejercicios <b class="label green pull-right">
-                                    11</b> </a></li> 
+                                <li><a href="<?php echo web_root; ?>admin/modules/lesson/index.php"><i class="menu-icon icon-bullhorn"></i>Clases
+                                <b class="label green pull-right">
+                                <?php
+                                    $sql = "SELECT count(*) as 'Cont' FROM tbllesson";
+                                    $mydb->setQuery($sql);
+                                    $cur = $mydb->loadResultList();
+                                    foreach ($cur as $result){
+                                        echo $result->Cont;
+                                    }           
+                                ?> </b> </a></li>
+                                <li><a href="<?php echo web_root; ?>admin/modules/exercises/index.php"><i class="menu-icon icon-inbox"></i>Ejercicios 
+                                <b class="label green pull-right"> 
+                                <?php
+                                    $sql = "SELECT count(*) as 'Cont' FROM tblexercise";
+                                    $mydb->setQuery($sql);
+                                    $cur = $mydb->loadResultList();
+                                    foreach ($cur as $result){
+                                        echo $result->Cont;
+                                    }           
+                                ?> </b> </a></li> 
                             </ul>
                             <!--/.widget-nav-->
-                            
+
                             
                             <ul class="widget widget-menu unstyled">
-                                <li><a href="<?php echo web_root; ?>admin/modules/galery/index.php"><i class="menu-icon icon-bold"></i> Galeria - Videos </a></li>
-                                <li><a href="<?php echo web_root; ?>admin/modules/modstudent/index.php"><i class="menu-icon icon-bold"></i> Estudiantes </a></li>
-                                <li><a href="<?php echo web_root; ?>admin/modules/user/index.php"><i class="menu-icon icon-book"></i> Usuarios </a></li> 
+                                <li><a href="<?php echo web_root; ?>admin/modules/galery/index.php"><i class="menu-icon icon-bold"></i> Galeria - Videos 
+                                <b class="label green pull-right"> 
+                                <?php
+                                    $sql = "SELECT count(*) as 'Cont' FROM tbllesson where category = 'Video'";
+                                    $mydb->setQuery($sql);
+                                    $cur = $mydb->loadResultList();
+                                    foreach ($cur as $result){
+                                        echo $result->Cont;
+                                    }           
+                                ?> </b></a></li>
+                                <li><a href="<?php echo web_root; ?>admin/modules/modstudent/index.php"><i class="menu-icon icon-bold"></i> Estudiantes 
+                                <b class="label green pull-right"> 
+                                <?php
+                                    $sql = "SELECT count(*) as 'Cont' FROM tblstudent";
+                                    $mydb->setQuery($sql);
+                                    $cur = $mydb->loadResultList();
+                                    foreach ($cur as $result){
+                                        echo $result->Cont;
+                                    }           
+                                ?> </b></a></li>
+                                <li><a href="<?php echo web_root; ?>admin/modules/user/index.php"><i class="menu-icon icon-book"></i> Usuarios 
+                                <b class="label green pull-right"> 
+                                <?php
+                                    $sql = "SELECT count(*) as 'Cont' FROM tblusers";
+                                    $mydb->setQuery($sql);
+                                    $cur = $mydb->loadResultList();
+                                    foreach ($cur as $result){
+                                        echo $result->Cont;
+                                    }           
+                                ?> </b></a></li> 
                             </ul>
                             <!--/.widget-nav-->
                             <ul class="widget widget-menu unstyled"> 

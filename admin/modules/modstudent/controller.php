@@ -33,59 +33,58 @@ switch ($action) {
 
    
 function doInsert(){
-	if(isset($_POST['studsave'])){
-	 	 	
-					// if ($_POST['LNAME'] == "" OR $_POST['LNAME'] == "" OR $_POST['PHONE'] == "") {
-					// $messageStats = false;
-					// message("All fields are required!","error");
-					// redirect('index.php?view=add');
-					// }else{
+	if(isset($_POST['studsave']))
+	{
+		
+		if ($_POST['LNAME'] == "" OR $_POST['LNAME'] == "" OR $_POST['PHONE'] == "") {
+			$messageStats = false;
+			message("Son requeridos todos los campos!","error");
+			redirect('index.php?view=add');
+		}
+		else
+		{
+			$student = New Student();
+			$student->IDNO 			= $_POST['IDNO'];
+			$student->FNAME 		= $_POST['FNAME'];
+			$student->MNAME 		= $_POST['MNAME'];
+			$student->LNAME 		= $_POST['LNAME'];
+			// $student->ADDRESS 		= $_POST['ADDRESS'];
+			// $student->RELIGION 		= $_POST['RELIGION'];
+			// $student->STATUS 		= $_POST['STATUS']; 
+			$student->PHONE 		= $_POST['PHONE'];
+			$student->EMAILADD 		= $_POST['EMAILADD'];
+			$student->STUDPASS 		= sha1($_POST['IDNO']);
+			// $student->PROIMAGE 		= $location;
+			$student->create(); 
+
+			//$parent = New Parents();
+			//$parent->IDNO 			= $_POST['IDNO'];
+			//$parent->create(); 
 
 
-					
-						  
-						$student = New Student();
-						$student->IDNO 			= $_POST['IDNO'];
-						$student->FNAME 		= $_POST['FNAME'];
-						$student->MNAME 		= $_POST['MNAME'];
-						$student->LNAME 		= $_POST['LNAME'];
-						// $student->ADDRESS 		= $_POST['ADDRESS'];
-						// $student->RELIGION 		= $_POST['RELIGION'];
-						// $student->STATUS 		= $_POST['STATUS']; 
-						$student->PHONE 		= $_POST['PHONE'];
-						$student->EMAILADD 		= $_POST['EMAILADD'];
-						$student->STUDPASS 		= sha1($_POST['IDNO']);
-						// $student->PROIMAGE 		= $location;
-						$student->create(); 
- 
-						$parent = New Parents();
-						$parent->IDNO 			= $_POST['IDNO'];
-						$parent->create(); 
+			//$schoolyear = New Schoolyear();
+			//$schoolyear->IDNO 			= $_POST['IDNO'];
+			//$schoolyear->SYFROM 		= $_POST['yearpickerfrom'];
+			//$schoolyear->SYTO 			= $_POST['yearpickerto'];
+			//$schoolyear->SEMESTER 		= $_POST['SEMESTER'];
+			//$schoolyear->COURSEID 		= $_POST['COURSE']; 
+			//$schoolyear->create();	
 
 
-						$schoolyear = New Schoolyear();
-						$schoolyear->IDNO 			= $_POST['IDNO'];
-						$schoolyear->SYFROM 		= $_POST['yearpickerfrom'];
-						$schoolyear->SYTO 			= $_POST['yearpickerto'];
-						$schoolyear->SEMESTER 		= $_POST['SEMESTER'];
-						$schoolyear->COURSEID 		= $_POST['COURSE']; 
-						$schoolyear->create();	
+			// $work = New Work();
+			// $work->IDNO 			= $_POST['IDNO'];
+			// $work->create();
 
+			// $autonum = New Autonumber(); 
+			// $autonum->auto_update(1);
 
-						// $work = New Work();
-						// $work->IDNO 			= $_POST['IDNO'];
-						// $work->create();
-
-						// $autonum = New Autonumber(); 
-						// $autonum->auto_update(1);
-
-						message("New [". $_POST['LNAME'] ."] created successfully!", "success");
-						redirect("index.php");
-						// }
-							
-					}
+			message("El estudiante [". $_POST['LNAME'] ."] a sido agegado satisfactoriamente!", "success");
+			redirect("index.php");
+		}
+				
+	}
 	 
-	  }
+}
  
 	function doEdit(){
 		if(isset($_POST['save'])){

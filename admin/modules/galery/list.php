@@ -12,12 +12,12 @@
             foreach ($cur as $result) {  
 
                 if ($result->Category=='Video') {
-
-
-    ?>          
+        ?>          
                 <div class="span4"> 
                     <div class="stretch">
-                        <video    controls class="pb-video-frame">
+                    Video
+                        <video controls class="pb-video-frame">
+                            
                             <source src="<?php echo web_root.'admin/modules/lesson/'.$result->FileLocation; ?>" type="video/mp4">
                             <source class="pb-video-frame" src="<?php echo web_root.'admin/modules/lesson/'.$result->FileLocation; ?>" type="video/ogg"> 
                         </video> 

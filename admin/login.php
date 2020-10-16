@@ -52,14 +52,14 @@ require_once("../include/initialize.php");
           <span class="txt1 p-b-11">
             Usuario
           </span>
-          <div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
+          <div class="wrap-input100 validate-input m-b-36" data-validate = "Nombre de usuario requerido">
             <input class="input100" type="text" name="user_email" >
             <span class="focus-input100"></span>
           </div>
           <span class="txt1 p-b-11">
             Contraseña
           </span>
-          <div class="wrap-input100 validate-input m-b-12" data-validate = "Password is required">
+          <div class="wrap-input100 validate-input m-b-12" data-validate = "Contraseña requerida">
             <span class="btn-show-pass">
               <i class="fa fa-eye"></i>
             </span>
@@ -120,6 +120,8 @@ require_once("../include/initialize.php");
 </html>
  
 <?php
+try
+{
   if(isset($_POST['btnLogin']))
   {
     $email = trim($_POST['user_email']);
@@ -133,27 +135,29 @@ require_once("../include/initialize.php");
     } 
     else 
     {
-    //it creates a new objects of member
-    $user = new User();
-    //make use of the static function, and we passed to parameters
-    $res = $user::userAuthentication($email, $h_upass);
-    if ($res==true) 
-    {
-      message("Has ingresado como".$_SESSION['TYPE'].".","satisfactoriamente");
-      if ($_SESSION['TYPE']=='Administrator')
+      //it creates a new objects of member
+      $user = new User();
+      //make use of the static function, and we passed to parameters
+      $res = $user::userAuthentication($email, $h_upass);
+      if ($res==true) 
       {
-        redirect(web_root."admin/index.php");
+        message("Has ingresado como".$_SESSION['TYPE'].".","satisfactoriamente");
+        if ($_SESSION['TYPE']=='Administrator')
+        {
+          redirect(web_root."admin/index.php");
+        }
+        else
+        {
+          redirect(web_root."admin/login.php");
+        }
       }
       else
       {
+        message("Esta cuenta no existe! Por favor contacte al Administrador.", "error");
         redirect(web_root."admin/login.php");
       }
     }
-    else
-    {
-      message("Esta cuenta no existe! Por favor contacte al Administrador.", "error");
-      redirect(web_root."admin/login.php");
-    }
+  }
 }
-}
+catch(Exception $ex){}
 ?> 

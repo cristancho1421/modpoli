@@ -120,7 +120,7 @@ body {
     height: 400px;
     margin-top: 12%;
     margin-left: 57%;
-    float: left;
+    float: right;
     opacity: .85;
     box-shadow: 0 5px 15px 0 rgb(87, 34, 34) ;
 }
@@ -274,7 +274,7 @@ body {
 }
 
 .ord{
-    padding-top: 5%;
+    padding-top: 2%;
 }
 
 .pie{

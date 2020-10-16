@@ -16,8 +16,7 @@
     </div>
   <div class="form-group">
   <div class="col-md-8">
-    <label class="col-md-4 control-label" for=
-    "Lesson">Clase:</label>
+    <label class="col-md-4 control-label" for="Lesson">Clase:</label>
 
     <div class="col-md-8"> 
       <select class="form-control" name="Lesson">

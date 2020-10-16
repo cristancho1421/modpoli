@@ -84,3 +84,11 @@
 		</div>
 	</div>
 </div>
+<style>
+	td{
+		text-align:center;
+	}
+	th{
+		text-align:center;
+	}
+</style>>

@@ -18,7 +18,7 @@
   <link href="<?php echo web_root; ?>plugins/homepage/assets/color/default.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,600,400italic|Open+Sans:400,600,700" rel="stylesheet">
   <script src="https://kit.fontawesome.com/654b456803.js" crossorigin="anonymous"></script>
-
+  <link rel="icon" type="image/png" href="icon.png">
 
   <!-- fav and touch icons -->
   <link rel="shortcut icon" href="assets/ico/favicon.ico">

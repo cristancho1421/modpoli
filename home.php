@@ -1,5 +1,3 @@
-<!-- <h1><?php echo $title; ?></h1> -->
-
 <div class="container ord">
   <div class="cont-menu">
     <div class="menu1">

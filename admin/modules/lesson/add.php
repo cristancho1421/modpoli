@@ -59,12 +59,10 @@
 
                    <div class="form-group">
                     <div class="col-md-11">
-                      <label class="col-md-2" align = "right"for=
-                      "file">Archivo Subido:</label>
-
                       <div class="col-md-10">
-                      <input type="file" name="file"/>
+                        <input type="file" name="file"/>
                       </div>
+                      <label class="col-md-2" align = "right" for="file">Archivo Subido:</label>
                   </div>
                     </div>
  

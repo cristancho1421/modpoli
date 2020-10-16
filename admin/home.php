@@ -21,15 +21,72 @@
 
   <div class="btn-controls">
     <div class="btn-box-row row-fluid">
-        <a href="#" class="btn-box big span4"><i class=" icon-random"></i><b>65%</b>
+        <a href="#" class="btn-box big span4"><i class="icon-facetime-video"></i>
+        <b>
+          <?php
+              $sql = "SELECT count(*) as 'Cont' FROM tbllesson where Category='Video'";
+              $mydb->setQuery($sql);
+              $cur = $mydb->loadResultList();
+              foreach ($cur as $result){
+                echo $result->Cont;
+              }           
+            ?>
+        </b>
             <p class="text-muted">
                 Clases</p>
-        </a><a href="#" class="btn-box big span4"><i class="icon-user"></i><b>15</b>
+        </a>
+        <a href="#" class="btn-box big span4"><i class="icon-user"></i><b>
+            <?php
+              $sql = "SELECT count(*) as 'Cont' FROM tblusers";
+              $mydb->setQuery($sql);
+              $cur = $mydb->loadResultList();
+              foreach ($cur as $result){
+                echo $result->Cont;
+              }           
+            ?></b>
             <p class="text-muted">
                 Usuarios</p>
-        </a><a href="#" class="btn-box big span4"><i class="icon-money"></i><b>15,152</b>
+        </a>
+        <a href="#" class="btn-box big span4"><i class="icon-file-alt"></i>
+        <b>
+          <?php
+            $sql = "SELECT count(*) as 'Cont' FROM tblexercise";
+            $mydb->setQuery($sql);
+            $cur = $mydb->loadResultList();
+            foreach ($cur as $result){
+              echo $result->Cont;
+            }           
+          ?>
+        </b>
             <p class="text-muted">
                 Ejercicios</p>
+        </a>
+        <a href="#" class="btn-box big span4"><i class="icon-download-alt"></i>
+        <b>
+            <?php
+              $sql = "SELECT count(*) as 'Cont' FROM tbllesson where Category='Documento'";
+              $mydb->setQuery($sql);
+              $cur = $mydb->loadResultList();
+              foreach ($cur as $result){
+                echo $result->Cont;
+              }           
+            ?> 
+          </b>
+          <p class="text-muted">Descargas</p>
+        </a>
+        
+        <a href="#" class="btn-box big span4"><i class="icon-user-md"></i>
+        <b>
+            <?php
+              $sql = "SELECT count(*) as 'Cont' FROM tblstudent";
+              $mydb->setQuery($sql);
+              $cur = $mydb->loadResultList();
+              foreach ($cur as $result){
+                echo $result->Cont;
+              }           
+            ?> 
+          </b>
+          <p class="text-muted">Estudiantes</p>
         </a>
     </div> 
 </div>

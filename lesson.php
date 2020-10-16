@@ -67,7 +67,7 @@
 			</thead>
 			<tbody>
 				<?php
-				$sql = "SELECT * FROM tbllesson WHERE Category='Video'";
+				$sql = "SELECT * FROM tbllesson WHERE Category='Simulador'";
 				$mydb->setQuery($sql);
 				$cur = $mydb->loadResultList();
 				foreach ($cur as $result) {
@@ -84,11 +84,10 @@
 	</div>
 </div>
 <style>
-	th {
-		text-align:center
-	}
 	td{
-		text-align:center
+		text-align:center;
 	}
-
+	th{
+		text-align:center;
+	}
 </style>
